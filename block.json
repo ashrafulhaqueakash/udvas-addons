@@ -1,0 +1,44 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/coderlift-countdown",
+	"title": "Count Up",
+	"category": "coderlift",
+	"icon": "ellipsis",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "coderlift",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+
+	"attributes": {
+		"startNumber": {
+			"type": "number",
+			"default": 0
+		},
+		"endNumber": {
+			"type": "number",
+			"default": 100
+		},
+		"additionalText": {
+			"type": "string",
+			"source": "html",
+			"selector": "h4",
+			"default": "Replace Text"	
+		},
+		"numberPrefix": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2",
+			"default": ""	
+		},
+		"numberSuffix": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2",
+			"default": ""	
+		}
+	}
+}
