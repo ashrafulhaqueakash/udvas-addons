@@ -1,9 +1,10 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/coderlift-countdown",
-	"title": "Count Up",
+	"name": "coderlift-block/coderlift-countdown",
+	"title": "Number Counter",
 	"category": "coderlift",
 	"icon": "ellipsis",
+	"keywords": [ "coderlift", "countup" ],
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false

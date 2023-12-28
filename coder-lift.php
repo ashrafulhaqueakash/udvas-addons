@@ -17,7 +17,8 @@
 require_once __DIR__ . '/inc/admin.php';
 function coderlift_block_plugin_init()
 {
-	register_block_type_from_metadata(__DIR__);
+	register_block_type_from_metadata(__DIR__ . './number-counter/block.json');
+	register_block_type_from_metadata(__DIR__ . './progress-bar/block.json');
 }
 add_action('init', 'coderlift_block_plugin_init');
 
