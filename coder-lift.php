@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Coderlift Block
- * Description:       A Coderlift Block.
+ * Description:       A Coderlift Block with Udvas Addons.
  * Requires at least: 5.7
  * Requires PHP:      7.0
  * Version:           0.1.0

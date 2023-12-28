@@ -14,6 +14,10 @@
 	"style": "file:./build/style-index.css",
 
 	"attributes": {
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		},	
 		"startNumber": {
 			"type": "number",
 			"default": 0

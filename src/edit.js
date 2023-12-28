@@ -3,6 +3,8 @@ import {
 	useBlockProps,
 	InspectorControls,
 	RichText,
+	AlignmentToolbar,
+	BlockControls,
 } from '@wordpress/block-editor';
 import './editor.scss';
 import {
@@ -19,7 +21,11 @@ export default function Edit({ attributes, setAttributes }) {
 		additionalText,
 		numberPrefix,
 		numberSuffix,
+		alignment,
 	} = attributes;
+	const onChangeAlignment = (newAlignment) => {
+		setAttributes({ alignment: newAlignment });
+	};
 	const onChangeStartNumber = (newStartNumber) => {
 		setAttributes({ startNumber: newStartNumber });
 	};
@@ -37,6 +43,12 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 	return (
 		<>
+			<BlockControls>
+				<AlignmentToolbar
+					value={alignment}
+					onChange={onChangeAlignment}
+				/>
+			</BlockControls>
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl
@@ -78,7 +90,11 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div {...useBlockProps()}>
+			<div
+				{...useBlockProps({
+					className: `count-up-block-align-${alignment}`,
+				})}
+			>
 				<span>{numberPrefix}</span>
 				<span>{endNumber}</span>
 				<span>{numberSuffix}</span>
@@ -87,7 +103,7 @@ export default function Edit({ attributes, setAttributes }) {
 					tagName="h4"
 					onChange={onChangeAdditionalText}
 					value={additionalText}
-					// allowedFormats={[]}
+					allowedFormats={[]}
 				/>
 			</div>
 		</>

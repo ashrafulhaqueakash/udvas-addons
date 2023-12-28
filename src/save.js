@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-
+import classnames from 'classnames';
 export default function save({ attributes }) {
 	const {
 		startNumber,
@@ -8,10 +8,16 @@ export default function save({ attributes }) {
 		additionalText,
 		numberPrefix,
 		numberSuffix,
+		alignment,
 	} = attributes;
-	console.log(additionalText);
+	const classes = classnames(`count-up-block-align-${alignment}
+	`);
 	return (
-		<div {...useBlockProps.save()}>
+		<div
+			{...useBlockProps.save({
+				className: classes,
+			})}
+		>
 			<div>
 				<span>{numberPrefix}</span>
 				<span>{endNumber}</span>
