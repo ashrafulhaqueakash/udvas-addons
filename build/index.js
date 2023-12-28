@@ -106,7 +106,9 @@ function Edit(_ref) {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Please Type +', 'coderlift')
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: `count-up-block-align-${alignment}`
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberPrefix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, endNumber), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberSuffix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberPrefix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "counter"
+  }, endNumber), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberSuffix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace Me', 'coderlift'),
     tagName: "h4",
     onChange: onChangeAdditionalText,
@@ -180,7 +182,9 @@ function save(_ref) {
 	`);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
     className: classes
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberPrefix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, endNumber), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberSuffix)), additionalText && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberPrefix), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "counter"
+  }, endNumber), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, numberSuffix)), additionalText && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "h4",
     value: additionalText
   }));

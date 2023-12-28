@@ -96,7 +96,7 @@ export default function Edit({ attributes, setAttributes }) {
 				})}
 			>
 				<span>{numberPrefix}</span>
-				<span>{endNumber}</span>
+				<span className='counter'>{endNumber}</span>
 				<span>{numberSuffix}</span>
 				<RichText
 					placeholder={__('Replace Me', 'coderlift')}

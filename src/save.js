@@ -20,7 +20,7 @@ export default function save({ attributes }) {
 		>
 			<div>
 				<span>{numberPrefix}</span>
-				<span>{endNumber}</span>
+				<span className='counter'>{endNumber}</span>
 				<span>{numberSuffix}</span>
 			</div>
 			{additionalText && (
